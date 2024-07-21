@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Cookies to Trackers",
+  "version": "1.0",
+  "description": "replaces mentions of sneaky cookies with what they really are; trackers.",
+  "author": "Jookz",
+  "action": {
+    "default_icon": "cookie.png",
+    "default_popup": "about.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "all_frames": true,
+      "js": ["script-content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
